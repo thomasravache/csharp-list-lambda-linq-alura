@@ -8,7 +8,7 @@ namespace CSharp_List_Lambda_Linq
 {
     public static class ListExtensoes
     {
-        public static void AdicionarVarios(List<int> lista, params int[] items)
+        public static void AdicionarVarios(this List<int> lista, params int[] items)
         {
             foreach(int item in items)
             {

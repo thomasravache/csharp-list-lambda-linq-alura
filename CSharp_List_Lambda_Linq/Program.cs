@@ -20,6 +20,8 @@ namespace CSharp_List_Lambda_Linq
 
             ListExtensoes.AdicionarVarios(idades, 1, 2, 3, 4);
 
+            idades.AdicionarVarios(9, 9, 9, 9);
+
             for(int i = 0; i < idades.Count; i++)
             {
                 Console.WriteLine(idades[i]);
