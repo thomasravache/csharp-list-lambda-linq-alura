@@ -1,4 +1,5 @@
-﻿using CSharp_List_Lambda_Linq.Extensoes;
+﻿using ByteBank.Modelos;
+using CSharp_List_Lambda_Linq.Extensoes;
 using System;
 using System.Collections.Generic;
 
@@ -9,7 +10,25 @@ namespace CSharp_List_Lambda_Linq
     {
         static void Main(string[] args)
         {
-            TestaSort();
+            //TestaSort();
+        }
+
+        static void TestarSortComClasse()
+        {
+            var contas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(341, 57480),
+                new ContaCorrente(342, 9999),
+                new ContaCorrente(343, 1),
+                new ContaCorrente(344, 18950)
+            };
+
+            contas.Sort();
+
+            foreach(var conta in contas)
+            {
+                Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
+            }
         }
 
         static void TestaSort()
