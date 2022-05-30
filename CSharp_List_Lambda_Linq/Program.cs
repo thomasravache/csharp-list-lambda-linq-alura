@@ -9,28 +9,36 @@ namespace CSharp_List_Lambda_Linq
     {
         static void Main(string[] args)
         {
-            List<int> idades = new List<int>();
-            var idades2 = new List<int>();
+            TestaSort();
+        }
 
-            idades2.Add(2);
-            idades2.Add(3);
-
-            foreach (int idade in idades2)
+        static void TestaSort()
+        {
+            var nomes = new List<string>()
             {
-                Console.WriteLine($"Idades2 {idade}");
+                "Guilherme",
+                "Luana",
+                "Ana",
+            };
+
+            nomes.Sort();
+
+            foreach (var nome in nomes)
+            {
+                Console.WriteLine(nome);
             }
+
+            var idades = new List<int>();
 
             idades.Add(1);
             idades.Add(5);
             idades.Add(6);
 
-            //idades.Remove(1);
+            idades.AdicionarVarios(99, -1);
 
-            //ListExtensoes.AdicionarVarios<int>(idades, 1, 2, 3, 4);
+            idades.Sort();
 
-            idades.AdicionarVarios(9, 9, 9, 9);
-
-            for(int i = 0; i < idades.Count; i++)
+            for (int i = 0; i < idades.Count; i++)
             {
                 Console.WriteLine(idades[i]);
             }
