@@ -3,7 +3,7 @@ using CSharp_List_Lambda_Linq.Comparadores;
 using CSharp_List_Lambda_Linq.Extensoes;
 using System;
 using System.Collections.Generic;
-
+using System.Linq;
 
 namespace CSharp_List_Lambda_Linq
 {
@@ -27,9 +27,11 @@ namespace CSharp_List_Lambda_Linq
 
             //contas.Sort(); Utilizando IComparable
 
-            contas.Sort(new ComparadorContaCorrentePorAgencia());
+            //contas.Sort(new ComparadorContaCorrentePorAgencia());
 
-            foreach(var conta in contas)
+            IOrderedEnumerable<ContaCorrente> contasOrdenadas = contas.OrderBy(conta => conta.Numero);
+
+            foreach(var conta in contasOrdenadas)
             {
                 Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
             }
