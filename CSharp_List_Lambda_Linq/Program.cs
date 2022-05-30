@@ -1,4 +1,5 @@
 ﻿using ByteBank.Modelos;
+using CSharp_List_Lambda_Linq.Comparadores;
 using CSharp_List_Lambda_Linq.Extensoes;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace CSharp_List_Lambda_Linq
         static void Main(string[] args)
         {
             //TestaSort();
+            //TestarSortComClasse();
         }
 
         static void TestarSortComClasse()
@@ -23,7 +25,9 @@ namespace CSharp_List_Lambda_Linq
                 new ContaCorrente(344, 18950)
             };
 
-            contas.Sort();
+            //contas.Sort(); Utilizando IComparable
+
+            contas.Sort(new ComparadorContaCorrentePorAgencia());
 
             foreach(var conta in contas)
             {
