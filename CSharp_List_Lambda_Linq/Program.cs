@@ -1,8 +1,7 @@
-﻿using System;
+﻿using CSharp_List_Lambda_Linq.Extensoes;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CSharp_List_Lambda_Linq
 {
@@ -18,7 +17,7 @@ namespace CSharp_List_Lambda_Linq
 
             //idades.Remove(1);
 
-            ListExtensoes.AdicionarVarios(idades, 1, 2, 3, 4);
+            //ListExtensoes.AdicionarVarios<int>(idades, 1, 2, 3, 4);
 
             idades.AdicionarVarios(9, 9, 9, 9);
 

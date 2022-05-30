@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_List_Lambda_Linq
+namespace CSharp_List_Lambda_Linq.Extensoes
 {
     public static class ListExtensoes
     {
-        public static void AdicionarVarios(this List<int> lista, params int[] items)
+        public static void AdicionarVarios<T>(this List<T> lista, params T[] itens)
         {
-            foreach(int item in items)
+            foreach (T item in itens)
             {
                 lista.Add(item);
             }
