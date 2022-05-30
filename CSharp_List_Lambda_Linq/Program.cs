@@ -10,6 +10,15 @@ namespace CSharp_List_Lambda_Linq
         static void Main(string[] args)
         {
             List<int> idades = new List<int>();
+            var idades2 = new List<int>();
+
+            idades2.Add(2);
+            idades2.Add(3);
+
+            foreach (int idade in idades2)
+            {
+                Console.WriteLine($"Idades2 {idade}");
+            }
 
             idades.Add(1);
             idades.Add(5);
